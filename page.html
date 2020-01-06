@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Effects</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-        <script src="https://codef.santo.fr/codef/codef_core.js"></script>
-        <script src="https://codef.santo.fr/codef/codef_starfield.js"></script>
-    </head>
-    <body>
-        <article>
-            <h1>Sky</h1>
-        </article>
-        <section class="first-picture">
-            <div id="star"></div>
-        </section>
-        <article>
-            <h1>Planet</h1>
-        </article>
-        <section class="second-picture">
-        </section>
-        <article>
-            <h1>Blue sky</h1>
-        </article>
-        <section class="third-picture">
-        </section>
-        <article>
-            <h1>Galaxy</h1>
-        </article>
-        <section class="fourth-picture">
-        </section>
-        <article>
-            <h1>This all</h1>
-        </article>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Effects</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://codef.santo.fr/codef/codef_core.js"></script>
+    <script src="https://codef.santo.fr/codef/codef_starfield.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+
+<body>
+    <article>
+        <div class="container first-color">
+            <div class="header">
+                <p>Sky</p>
+            </div>
+            <div class="info">
+                <p id="text"></p>
+            </div>
+        </div>
+    </article>
+    <section class="first-picture">
+        <div id="star"></div>
+    </section>
+    <article>
+        <div class="container second-color">
+            <div class="header">
+                <p>Planet</p>
+            </div>
+            <div class="info">
+                <p id="text2"></p>
+            </div>
+        </div>
+    </article>
+    <section class="second-picture">
+    </section>
+    <article>
+        <div class="container third-color">
+            <div class="header">
+                <p>Blue sky</p>
+            </div>
+            <div class="info">
+                <p id="text3"></p>
+            </div>
+        </div>
+    </article>
+    <section class="third-picture">
+    </section>
+    <article>
+        <div class="container fourth-color">
+            <div class="header">
+                <p>Galaxy</p>
+            </div>
+            <div class="info">
+                <p id="text4"></p>
+            </div>
+        </div>
+    </article>
+    <section class="fourth-picture">
+    </section>
+    <footer>
+        <div class="description-info">
+            <p>info</p>
+        </div>
+        <div class="main-info">
+            <p id="text5"></p>
+        </div>
+        <div class="author-info">
+            <a href = "https://github.com/kanopa">kanopa</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
 </html>

@@ -1,6 +1,9 @@
 html,body
     height: 100%
     box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+html, body, p, h1
     margin: 0
     padding: 0
 
@@ -12,13 +15,57 @@ section
     background-size: cover
     background-position: center
 
-article
+footer
     display: flex
-    height: 100px
-    background: #1e1044
-    color: white
-    justify-content: center
+    justify-content: space-between
     align-items: center
+    height: 60px
+    padding: 0 40px
+    color: white
+    background: linear-gradient(90deg,#00141b,#1a0033, #240a00, #040020)
+
+.container
+    display: flex
+    color: white
+    width: 100%
+    height: 100px
+    align-items: center
+    justify-content: center
+    .header
+        display: flex
+        justify-content: center
+        font-size: 26px
+        font-weight: 900
+        letter-spacing: 10px
+    .info
+        margin-left: 150px
+        width: 600px
+        font-size: 18px
+        font-weight: 300
+        letter-spacing: 1px
+
+
+.main-info
+    font-size: 24px
+    font-weight: 900
+
+.description-info
+    font-weight: 300
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+        text-shadow: 0 0 5px #fff
+
+.author-info > *
+    font-weight: 300
+    color: white
+    cursor: pointer
+    text-decoration: none
+    transition: .3s ease
+    &:hover
+        text-shadow: 0 0 5px #fff
+
+
 .first-picture
     background-image: url(./images/sky2.jpg)
 
@@ -31,22 +78,30 @@ article
 .fourth-picture
     background-image: url(./images/space.jpg)
 
+.first-color
+    background: linear-gradient(90deg,#1d0025,#460037, #2e0019)
+
+.second-color
+    background: linear-gradient(45deg,#0a000e, #03001a, #5e0049)
+
+.third-color
+    background: linear-gradient(90deg,#0a000e,#003f47)
+
+.fourth-color
+    background: linear-gradient(45deg,#0a000e,#000f30, #300a00)
+
 #star
     opacity: 0.4
 
-/* width */
 ::-webkit-scrollbar 
   width: 8px
 
-/* Track */
 ::-webkit-scrollbar-track
   background: rgb(32, 16, 78)
  
-/* Handle */
 ::-webkit-scrollbar-thumb
-  background: linear-gradient(45deg, #920c5a, #050655)
+  background:  linear-gradient(45deg, #c40c77, #1618af)
   border-radius: 5px
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover
-  background: #555
+  background: linear-gradient(45deg, #920c5a, #0c0e7e)
