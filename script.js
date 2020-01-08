@@ -95,6 +95,7 @@ for(var i = 0 ; i < reveal.length; i++)
 {
     new ScrollMagic.Scene({
         triggerElement: ".third-color",
+        offset: -100,
         triggerHook: 1  
     }).setClassToggle(reveal[i], "visible")
     .addIndicators({name: "skdskd"})

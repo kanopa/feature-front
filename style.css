@@ -127,13 +127,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-.second-picture .first-planet {
-  position: relative;
-  z-index: 2;
-  background-image: url(./images/planet-solar/venus.png);
-}
-
-.second-picture .first-planet::after {
+.second-picture .planet::after {
   opacity: 0;
   -webkit-transition: .3s ease;
   transition: .3s ease;
@@ -150,6 +144,15 @@ footer {
   color: white;
   font-size: 30px;
   font-weight: 300;
+}
+
+.second-picture .first-planet {
+  position: relative;
+  z-index: 2;
+  background-image: url(./images/planet-solar/venus.png);
+}
+
+.second-picture .first-planet::after {
   content: "Venus";
 }
 
@@ -165,22 +168,6 @@ footer {
 }
 
 .second-picture .second-planet::after {
-  opacity: 0;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  -webkit-transform: translatey(60px);
-          transform: translatey(60px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  bottom: 50px;
-  color: white;
-  font-size: 30px;
-  font-weight: 300;
   content: "Mars";
 }
 
@@ -190,22 +177,6 @@ footer {
 }
 
 .second-picture .third-planet::after {
-  opacity: 0;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  -webkit-transform: translatey(60px);
-          transform: translatey(60px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  bottom: 50px;
-  color: white;
-  font-size: 30px;
-  font-weight: 300;
   content: "Mercury";
 }
 
