@@ -1,7 +1,7 @@
 var myCanvas;
 var myStarField;
 var stars = 1000;
-var x = 1920;
+var x = window.innerWidth;
 var y = 1000;
 
 init();
@@ -60,3 +60,43 @@ typewriter5.changeDelay(200)
     .typeString("!!!")
     .pauseFor(3000)
     .start();
+
+var controller = new ScrollMagic.Controller();
+
+var firstScroll = new TimelineMax();
+firstScroll
+    .set('.first-planet', {scale : 3.5, transformOrigin: "center"})
+    .to('.first-planet',3, {scale: 2.5, y: "-50%"})
+    .to('.first-planet',3, {scale: 1, y: "0%"})
+
+var scene = new ScrollMagic.Scene({
+    triggerElement: '.second-color',
+    duration: "80%"
+}).setTween(firstScroll)
+    .addIndicators()
+    .addTo(controller);
+
+var secondScroll = new TimelineMax();
+secondScroll
+    .to('.second-planet',3, {x: "-120%"})
+    .to('.third-planet',3, {x: "120%"})
+
+var scene2 = new ScrollMagic.Scene({
+    triggerElement: '.second-picture',
+    triggerHook: 0,
+    duration: "150%",
+}).setTween(secondScroll)
+    .addIndicators()
+    .setPin('.second-picture')
+    .addTo(controller)
+
+var reveal = [".first-planet",".second-planet",".third-planet"];
+for(var i = 0 ; i < reveal.length; i++)
+{
+    new ScrollMagic.Scene({
+        triggerElement: ".third-color",
+        triggerHook: 1  
+    }).setClassToggle(reveal[i], "visible")
+    .addIndicators({name: "skdskd"})
+    .addTo(controller);
+}

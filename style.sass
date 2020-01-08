@@ -1,6 +1,8 @@
+*
+    box-sizing: border-box
+    
 html,body
     height: 100%
-    box-sizing: border-box
     font-family: 'Roboto', sans-serif
 
 html, body, p, h1
@@ -70,7 +72,67 @@ footer
     background-image: url(./images/sky2.jpg)
 
 .second-picture
+    display: flex
+    align-items: center
+    justify-content: center
     background-image: url(./images/planet.jpg)
+    .planet
+        height: 250px
+        width: 250px
+        background-size: contain
+        background-repeat: no-repeat
+    .first-planet
+        position: relative
+        z-index: 2
+        background-image: url(./images/planet-solar/venus.png)
+        &::after
+            opacity: 0
+            transition: .3s ease
+            transform: translatey(60px)
+            display: flex
+            justify-content: center
+            position: relative
+            bottom: 50px
+            color: white
+            font-size: 30px
+            font-weight: 300
+            content: "Venus"
+    .visible
+        &::after
+            opacity: 1 !important
+            transform: none !important
+    .second-planet
+        position: absolute
+        background-image: url(./images/planet-solar/mars.png)
+        &::after
+            opacity: 0
+            transition: .3s ease
+            transform: translatey(60px)
+            display: flex
+            justify-content: center
+            position: relative
+            bottom: 50px
+            color: white
+            font-size: 30px
+            font-weight: 300
+            content: "Mars"
+    .third-planet
+        position: absolute
+        background-image: url(./images/planet-solar/mercury.png)
+        &::after
+            opacity: 0
+            transition: .3s ease
+            transform: translatey(60px)
+            display: flex
+            justify-content: center
+            position: relative
+            bottom: 50px
+            color: white
+            font-size: 30px
+            font-weight: 300
+            content: "Mercury"
+    .fourth-planet
+        background-image: url(./images/planet-solar/earth.png)
 
 .third-picture
     background-image: url(./images/sky.jpg)
