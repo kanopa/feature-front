@@ -95,9 +95,25 @@ for(var i = 0 ; i < reveal.length; i++)
 {
     new ScrollMagic.Scene({
         triggerElement: ".third-color",
-        offset: -100,
+        offset: -200,
         triggerHook: 1  
     }).setClassToggle(reveal[i], "visible")
     .addIndicators({name: "skdskd"})
     .addTo(controller);
 }
+
+var thirdScroll = new TimelineMax();
+thirdScroll
+    .to(".wrapper-mars-pic", 0.5, {z: -150})
+	.to(".wrapper-mars-pic", 1,   {x: "-50%"})
+    .to(".wrapper-mars-pic", 0.5, {z: 0})
+    .to(".wrapper-mars-pic",5,{y: "-100%",delay: 0.5})
+
+var scene3 = new ScrollMagic.Scene({
+    triggerElement: ".third-picture",
+    triggerHook: 0,
+    duration: "250%"
+}).setTween(thirdScroll)
+    .setPin(".third-picture")
+    .addIndicators({name: 'indo'})
+    .addTo(controller);
