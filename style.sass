@@ -68,8 +68,32 @@ footer
         text-shadow: 0 0 5px #fff
 
 
+#star
+    opacity: 0.4
+    height: 100vh
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+#maincanvas
+    height: 100%
+    width: 100%
+
 .first-picture
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #1b001f
     background-image: url(./images/sky2.jpg)
+    position: relative
+    .first-main-text
+        z-index: 1
+        color: transparent
+        font-size: 140px
+        -webkit-text-stroke: 1px white
+        transform: skewx(-10deg)
+        line-height: 110px
 
 .second-picture
     display: flex
@@ -116,29 +140,62 @@ footer
         background-image: url(./images/planet-solar/earth.png)
 
 .third-picture
+    display: flex
+    flex-direction: column
+    height: 200%
     perspective: 400
     background-image: url(./images/sky.jpg)
-    .wrapper-mars-pic
-        display: flex
+    .first-part
         height: 100%
-        width: 200%
-        padding: 10px
-        background-color: #b8c6db
-        background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)
-        .mars-work
+        .wrapper-mars-pic
+            display: flex
             height: 100%
+            width: 300%
+            padding: 10px 0
+            background-color: #b8c6db
+            background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)
+            .mars-work
+                height: 100%
+                width: calc(100%/3)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center
+                background-image: url(./images/planet-solar/orig.jpg)
+            .cosmo-work
+                height: 100%
+                width: calc(100%/3)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center
+                background-image: url(./images/planet-solar/cosmo.jpg)
+            .cosmo2-work
+                height: 100%
+                width: calc(100%/3)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center
+                background-image: url(./images/planet-solar/cosmo2.jpg)
+    .second-part
+        height: 100%
+        .photo-gallery-container
+            display: flex
+            height: 50%
             width: 50%
-            background-repeat: no-repeat
-            background-size: 95%
-            background-position: center
-            background-image: url(./images/planet-solar/orig.jpg)
-        .moon-work
-            height: 100%
-            width: 50%
-            background-repeat: no-repeat
-            background-size: 95%
-            background-position: center
-            background-image: url(./images/planet-solar/cosmo.jpg)
+            .cosmo2-gallery
+                height: 100%
+                width: 100%
+                background-size: cover
+                background-image: url(./images/planet-solar/cosmo2.jpg)
+            .mars-gallery
+                height: 100%
+                width: 100%
+                background-size: cover
+                background-image: url(./images/planet-solar/orig.jpg)
+            .cosmo-gallery
+                height: 100%
+                width: 100%
+                background-size: cover
+                background-image: url(./images/planet-solar/cosmo.jpg)
 
 .fourth-picture
     background-image: url(./images/space.jpg)
@@ -154,9 +211,6 @@ footer
 
 .fourth-color
     background: linear-gradient(45deg,#0a000e,#000f30, #300a00)
-
-#star
-    opacity: 0.4
 
 ::-webkit-scrollbar 
   width: 8px

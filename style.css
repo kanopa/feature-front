@@ -103,8 +103,44 @@ footer {
   text-shadow: 0 0 5px #fff;
 }
 
+#star {
+  opacity: 0.4;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#maincanvas {
+  height: 100%;
+  width: 100%;
+}
+
 .first-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1b001f;
   background-image: url(./images/sky2.jpg);
+  position: relative;
+}
+
+.first-picture .first-main-text {
+  z-index: 1;
+  color: transparent;
+  font-size: 140px;
+  -webkit-text-stroke: 1px white;
+  -webkit-transform: skewx(-10deg);
+          transform: skewx(-10deg);
+  line-height: 110px;
 }
 
 .second-picture {
@@ -185,37 +221,91 @@ footer {
 }
 
 .third-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200%;
   -webkit-perspective: 400;
           perspective: 400;
   background-image: url(./images/sky.jpg);
 }
 
-.third-picture .wrapper-mars-pic {
+.third-picture .first-part {
+  height: 100%;
+}
+
+.third-picture .first-part .wrapper-mars-pic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  width: 200%;
-  padding: 10px;
+  width: 300%;
+  padding: 10px 0;
   background-color: #b8c6db;
   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
-.third-picture .wrapper-mars-pic .mars-work {
+.third-picture .first-part .wrapper-mars-pic .mars-work {
   height: 100%;
-  width: 50%;
+  width: calc(100%/3);
   background-repeat: no-repeat;
-  background-size: 95%;
+  background-size: cover;
   background-position: center;
   background-image: url(./images/planet-solar/orig.jpg);
 }
 
-.third-picture .wrapper-mars-pic .moon-work {
+.third-picture .first-part .wrapper-mars-pic .cosmo-work {
   height: 100%;
-  width: 50%;
+  width: calc(100%/3);
   background-repeat: no-repeat;
-  background-size: 95%;
+  background-size: cover;
   background-position: center;
+  background-image: url(./images/planet-solar/cosmo.jpg);
+}
+
+.third-picture .first-part .wrapper-mars-pic .cosmo2-work {
+  height: 100%;
+  width: calc(100%/3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./images/planet-solar/cosmo2.jpg);
+}
+
+.third-picture .second-part {
+  height: 100%;
+}
+
+.third-picture .second-part .photo-gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  width: 50%;
+}
+
+.third-picture .second-part .photo-gallery-container .cosmo2-gallery {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-image: url(./images/planet-solar/cosmo2.jpg);
+}
+
+.third-picture .second-part .photo-gallery-container .mars-gallery {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-image: url(./images/planet-solar/orig.jpg);
+}
+
+.third-picture .second-part .photo-gallery-container .cosmo-gallery {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
   background-image: url(./images/planet-solar/cosmo.jpg);
 }
 
@@ -239,10 +329,6 @@ footer {
 
 .fourth-color {
   background: linear-gradient(45deg, #0a000e, #000f30, #300a00);
-}
-
-#star {
-  opacity: 0.4;
 }
 
 ::-webkit-scrollbar {

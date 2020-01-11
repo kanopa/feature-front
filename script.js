@@ -1,8 +1,8 @@
 var myCanvas;
 var myStarField;
 var stars = 1000;
-var x = window.innerWidth;
-var y = 1000;
+var x = screen.availWidth;
+var y = screen.availHeight;
 
 init();
 
@@ -104,15 +104,18 @@ for(var i = 0 ; i < reveal.length; i++)
 
 var thirdScroll = new TimelineMax();
 thirdScroll
-    .to(".wrapper-mars-pic", 0.5, {z: -150})
-	.to(".wrapper-mars-pic", 1,   {x: "-50%"})
-    .to(".wrapper-mars-pic", 0.5, {z: 0})
-    .to(".wrapper-mars-pic",5,{y: "-100%",delay: 0.5})
+    .to(".wrapper-mars-pic", 8, {y: -180,z: -150, delay: 5})
+	.to(".wrapper-mars-pic", 16,   {x: "-33.333%"})
+    .to(".wrapper-mars-pic", 8, {y: 0, z: 0})
+
+    .to(".wrapper-mars-pic", 8, {y: -180,z: -150, delay: 5})
+    .to(".wrapper-mars-pic", 16, {x: "-66.666%"})
+    .to(".wrapper-mars-pic", 8, {y: 0, z: 0})
 
 var scene3 = new ScrollMagic.Scene({
     triggerElement: ".third-picture",
     triggerHook: 0,
-    duration: "250%"
+    duration: "400%"
 }).setTween(thirdScroll)
     .setPin(".third-picture")
     .addIndicators({name: 'indo'})
