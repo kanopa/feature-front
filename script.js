@@ -104,13 +104,13 @@ for(var i = 0 ; i < reveal.length; i++)
 
 var thirdScroll = new TimelineMax();
 thirdScroll
-    .to(".wrapper-mars-pic", 8, {y: -180,z: -150, delay: 5})
-	.to(".wrapper-mars-pic", 16,   {x: "-33.333%"})
-    .to(".wrapper-mars-pic", 8, {y: 0, z: 0})
+    .to(".wrapper-mars-pic", 4, {y: -180,z: -150, delay: 5})
+	.to(".wrapper-mars-pic", 12,   {x: "-33.333%"})
+    .to(".wrapper-mars-pic", 4, {y: 0, z: 0})
 
-    .to(".wrapper-mars-pic", 8, {y: -180,z: -150, delay: 5})
-    .to(".wrapper-mars-pic", 16, {x: "-66.666%"})
-    .to(".wrapper-mars-pic", 8, {y: 0, z: 0})
+    .to(".wrapper-mars-pic", 4, {y: -180,z: -150, delay: 5})
+    .to(".wrapper-mars-pic", 12, {x: "-66.666%"})
+    .to(".wrapper-mars-pic", 4, {y: 0, z: 0})
 
 var scene3 = new ScrollMagic.Scene({
     triggerElement: ".third-picture",
@@ -133,4 +133,21 @@ var scene4 = new ScrollMagic.Scene({
     duration: "50%"
 }).setTween(fourthScroll)
     .addIndicators({name: '13231312'})
+    .addTo(controller);
+
+var zeroScroll = new TimelineMax();
+zeroScroll
+    .set(".text1",{autoAlpha:0,x: -400})
+    .set(".text2",{autoAlpha:0,x: 400})
+
+    .to(".text1",10,{autoAlpha:1, x: 0, delay: 3})
+    .to(".text2",10,{autoAlpha:1, x: 0})
+
+var scene0 = new ScrollMagic.Scene({
+    triggerHook: 0,
+    triggerElement: ".first-picture",
+    duration: "200%"
+}).setTween(zeroScroll)
+    .addIndicators({name:"first"})
+    .setPin(".first-picture")
     .addTo(controller);

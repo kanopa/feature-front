@@ -143,6 +143,16 @@ footer {
   line-height: 110px;
 }
 
+.first-picture .first-main-text .text1 {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.first-picture .first-main-text .text2 {
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
+}
+
 .second-picture {
   display: -webkit-box;
   display: -ms-flexbox;
