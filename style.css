@@ -234,11 +234,7 @@ footer {
   background-image: url(./images/sky.jpg);
 }
 
-.third-picture .first-part {
-  height: 100%;
-}
-
-.third-picture .first-part .wrapper-mars-pic {
+.third-picture .wrapper-mars-pic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,7 +245,7 @@ footer {
   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
-.third-picture .first-part .wrapper-mars-pic .mars-work {
+.third-picture .wrapper-mars-pic .mars-work {
   height: 100%;
   width: calc(100%/3);
   background-repeat: no-repeat;
@@ -258,7 +254,7 @@ footer {
   background-image: url(./images/planet-solar/orig.jpg);
 }
 
-.third-picture .first-part .wrapper-mars-pic .cosmo-work {
+.third-picture .wrapper-mars-pic .cosmo-work {
   height: 100%;
   width: calc(100%/3);
   background-repeat: no-repeat;
@@ -267,7 +263,7 @@ footer {
   background-image: url(./images/planet-solar/cosmo.jpg);
 }
 
-.third-picture .first-part .wrapper-mars-pic .cosmo2-work {
+.third-picture .wrapper-mars-pic .cosmo2-work {
   height: 100%;
   width: calc(100%/3);
   background-repeat: no-repeat;
@@ -277,36 +273,116 @@ footer {
 }
 
 .third-picture .second-part {
-  height: 100%;
-}
-
-.third-picture .second-part .photo-gallery-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50%;
-  width: 50%;
-}
-
-.third-picture .second-part .photo-gallery-container .cosmo2-gallery {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   width: 100%;
+}
+
+.third-picture .second-part .cosmo2-gallery {
+  position: relative;
+  height: 400px;
+  width: 400px;
   background-size: cover;
   background-image: url(./images/planet-solar/cosmo2.jpg);
+  border: 10px solid;
+  border-color: #d6e1f1;
+  border-radius: 10px;
 }
 
-.third-picture .second-part .photo-gallery-container .mars-gallery {
-  height: 100%;
-  width: 100%;
+.third-picture .second-part .cosmo2-gallery::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: "#";
+  font-size: 50px;
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 70px;
+  height: 70px;
+  background-color: #5b72f5;
+  border-radius: 50%;
+}
+
+.third-picture .second-part .mars-gallery {
+  position: relative;
+  height: 400px;
+  width: 400px;
   background-size: cover;
   background-image: url(./images/planet-solar/orig.jpg);
+  border: 10px solid;
+  border-color: #b8c6db;
 }
 
-.third-picture .second-part .photo-gallery-container .cosmo-gallery {
-  height: 100%;
-  width: 100%;
+.third-picture .second-part .mars-gallery::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: "#";
+  font-size: 50px;
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 70px;
+  height: 70px;
+  background-color: #5b72f5;
+  border-radius: 50%;
+}
+
+.third-picture .second-part .cosmo-gallery {
+  position: relative;
+  height: 400px;
+  width: 400px;
   background-size: cover;
   background-image: url(./images/planet-solar/cosmo.jpg);
+  border: 10px solid;
+  border-color: #b8c6db;
+}
+
+.third-picture .second-part .cosmo-gallery::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: "#";
+  font-size: 50px;
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 70px;
+  height: 70px;
+  background-color: #5b72f5;
+  border-radius: 50%;
 }
 
 .fourth-picture {
