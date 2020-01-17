@@ -174,35 +174,44 @@ footer
             background-position: center
             background-image: url(./images/planet-solar/cosmo2.jpg)
     .second-part
+        margin-top: 30px
         display: flex
         justify-content: space-around
-        align-items: center
+        align-items: flex-start
         height: 100%
         width: 100%
-        .cosmo2-gallery
-            position: relative
-            height: 400px
+        .gallery
             width: 400px
-            background-size: cover
-            background-image: url(./images/planet-solar/cosmo2.jpg)
-            border: 10px solid
-            border-color: #d6e1f1
-            border-radius: 10px 
-            &::after
+            height: 400px
+            position: relative
+            background-color: white
+            padding: 10px
+            border-radius: 10px
+            p
                 display: flex
                 justify-content: center
                 align-items: center
-                content: "#"
-                font-size: 50px
-                color: white
-                font-weight: 900
-                position: absolute
-                top: -30px
-                left: -30px
+                top: -20px
+                left: -20px
                 width: 70px
                 height: 70px
+                font-size: 50px
+                font-weight: 900
+                position: absolute
                 background-color: #5b72f5
+                color: white
                 border-radius: 50%
+            .photo
+                height: 380px
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+            .photo1
+                background-image: url(./images/planet-solar/cosmo2.jpg)
+            .photo2
+                background-image: url(./images/planet-solar/cosmo.jpg)
+            .photo3
+                background-image: url(./images/planet-solar/orig.jpg)
         .mars-gallery
             position: relative
             height: 400px

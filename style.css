@@ -273,30 +273,29 @@ footer {
 }
 
 .third-picture .second-part {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 100%;
   width: 100%;
 }
 
-.third-picture .second-part .cosmo2-gallery {
-  position: relative;
-  height: 400px;
+.third-picture .second-part .gallery {
   width: 400px;
-  background-size: cover;
-  background-image: url(./images/planet-solar/cosmo2.jpg);
-  border: 10px solid;
-  border-color: #d6e1f1;
+  height: 400px;
+  position: relative;
+  background-color: white;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.third-picture .second-part .cosmo2-gallery::after {
+.third-picture .second-part .gallery p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,17 +305,35 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  content: "#";
-  font-size: 50px;
-  color: white;
-  font-weight: 900;
-  position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: -20px;
   width: 70px;
   height: 70px;
+  font-size: 50px;
+  font-weight: 900;
+  position: absolute;
   background-color: #5b72f5;
+  color: white;
   border-radius: 50%;
+}
+
+.third-picture .second-part .gallery .photo {
+  height: 380px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.third-picture .second-part .gallery .photo1 {
+  background-image: url(./images/planet-solar/cosmo2.jpg);
+}
+
+.third-picture .second-part .gallery .photo2 {
+  background-image: url(./images/planet-solar/cosmo.jpg);
+}
+
+.third-picture .second-part .gallery .photo3 {
+  background-image: url(./images/planet-solar/orig.jpg);
 }
 
 .third-picture .second-part .mars-gallery {

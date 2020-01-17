@@ -115,8 +115,22 @@ thirdScroll
 var scene3 = new ScrollMagic.Scene({
     triggerElement: ".third-picture",
     triggerHook: 0,
-    duration: "400%"
+    duration: "500%"
 }).setTween(thirdScroll)
     .setPin(".third-picture")
     .addIndicators({name: 'indo'})
+    .addTo(controller);
+
+var fourthScroll = new TimelineMax();
+fourthScroll
+    .to(".trigger1",5,{y: 200})
+    .to(".trigger2",5,{y: 250},"-=5")
+    .to(".trigger3",5,{y: 300},"-=5")
+
+var scene4 = new ScrollMagic.Scene({
+    triggerElement: ".second-part",
+    triggerHook: 0.5,
+    duration: "100%"
+}).setTween(fourthScroll)
+    .addIndicators({name: '13231312'})
     .addTo(controller);
