@@ -124,13 +124,13 @@ var scene3 = new ScrollMagic.Scene({
 var fourthScroll = new TimelineMax();
 fourthScroll
     .to(".trigger1",5,{y: 200})
-    .to(".trigger2",5,{y: 250},"-=5")
-    .to(".trigger3",5,{y: 300},"-=5")
+    .to(".trigger2",5,{y: 270},"-=5")
+    .to(".trigger3",5,{y: 340},"-=5")
 
 var scene4 = new ScrollMagic.Scene({
     triggerElement: ".second-part",
     triggerHook: 0.5,
-    duration: "100%"
+    duration: "50%"
 }).setTween(fourthScroll)
     .addIndicators({name: '13231312'})
     .addTo(controller);
