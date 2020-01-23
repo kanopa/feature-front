@@ -104,36 +104,47 @@ for(var i = 0 ; i < reveal.length; i++)
 
 var thirdScroll = new TimelineMax();
 thirdScroll
-    .to(".wrapper-mars-pic", 4, {y: -180,z: -150, delay: 5})
+    .set(".trigger1", {className:"+=trigger11"})
+    .to(".trigger-photo1",2,{y: 100})
+    .to(".wrapper-mars-pic", 4, {y: -180,z: -148, delay: 5})
 	.to(".wrapper-mars-pic", 12,   {x: "-33.333%"})
     .to(".wrapper-mars-pic", 4, {y: 0, z: 0})
+    .set(".trigger1", {className:"-=trigger11"})
+    .to(".trigger-photo1",2,{y: 0})
+    .to(".trigger-photo2",4,{y: 100})
 
-    .to(".wrapper-mars-pic", 4, {y: -180,z: -150, delay: 5})
+    .set(".trigger2", {className:"+=trigger22"})
+    .to(".wrapper-mars-pic", 4, {y: -180,z: -148, delay: 5})
     .to(".wrapper-mars-pic", 12, {x: "-66.666%"})
     .to(".wrapper-mars-pic", 4, {y: 0, z: 0})
+    .set(".trigger2", {className:"-=trigger22"})
+    .set(".trigger3", {className:"+=trigger33"})
+    .to(".trigger-photo2",2,{y: 0})
+    .to(".trigger-photo3",4,{y: 100})
+    .set(".trigger3", { delay: 10 })
 
 var scene3 = new ScrollMagic.Scene({
     triggerElement: ".third-picture",
     triggerHook: 0,
-    duration: "500%"
+    duration: "800%"
 }).setTween(thirdScroll)
     .setPin(".third-picture")
     .addIndicators({name: 'indo'})
     .addTo(controller);
 
-var fourthScroll = new TimelineMax();
-fourthScroll
-    .to(".trigger1",5,{y: 200})
-    .to(".trigger2",5,{y: 270},"-=5")
-    .to(".trigger3",5,{y: 340},"-=5")
+// var fourthScroll = new TimelineMax();
+// fourthScroll
+//     .to(".trigger1",5,{y: 200})
+//     .to(".trigger2",5,{y: 270},"-=5")
+//     .to(".trigger3",5,{y: 340},"-=5")
 
-var scene4 = new ScrollMagic.Scene({
-    triggerElement: ".second-part",
-    triggerHook: 0.5,
-    duration: "50%"
-}).setTween(fourthScroll)
-    .addIndicators({name: '13231312'})
-    .addTo(controller);
+// var scene4 = new ScrollMagic.Scene({
+//     triggerElement: ".second-part",
+//     triggerHook: 0.5,
+//     duration: "50%"
+// }).setTween(fourthScroll)
+//     .addIndicators({name: '13231312'})
+//     .addTo(controller);
 
 var zeroScroll = new TimelineMax();
 zeroScroll
@@ -151,3 +162,6 @@ var scene0 = new ScrollMagic.Scene({
     .addIndicators({name:"first"})
     .setPin(".first-picture")
     .addTo(controller);
+
+//.to('.second-planet',3, {bezier:[{x:-50, y:50}, {x:0, y:100}]/*bezier end*/, ease:Linear.easeNone, paused:false})
+//.to('.third-planet',3, {bezier:[{x: 50, y:50}, {x:0, y:100}]/*bezier end*/, ease:Linear.easeNone, paused:false}, "-=3")

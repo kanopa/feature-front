@@ -146,12 +146,23 @@ footer
 .third-picture
     display: flex
     flex-direction: column
-    height: 200%
-    perspective: 400
+    height: calc(100% +30px)
+    perspective: 400 
     background-image: url(./images/sky.jpg)
-    .wrapper-mars-pic
-        display: flex
+    .blur
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 50
+        width: 100%
         height: 100%
+        background-color: #000
+        opacity: 0.6
+    .wrapper-mars-pic
+        position: relative
+        z-index: 100
+        display: flex
+        height: 50%
         width: 300%
         padding: 10px 0
         background-color: #b8c6db
@@ -173,9 +184,10 @@ footer
         display: flex
         justify-content: space-around
         align-items: flex-start
-        height: 100%
+        height: 50%
         width: 100%
         .gallery
+            transition: .5s ease
             width: 400px
             height: 400px
             position: relative
@@ -207,52 +219,30 @@ footer
                 background-image: url(./images/planet-solar/cosmo.jpg)
             .photo3
                 background-image: url(./images/planet-solar/orig.jpg)
-        .mars-gallery
-            position: relative
-            height: 400px
-            width: 400px
-            background-size: cover
-            background-image: url(./images/planet-solar/orig.jpg)
-            border: 10px solid
-            border-color: #b8c6db
-            &::after
+            .text-photo-inner
                 display: flex
                 justify-content: center
                 align-items: center
-                content: "#"
-                font-size: 50px
-                color: white
-                font-weight: 900
+                padding: 0 5px
+                font-size: 26px
+                border-radius: 5px
+                width: 400px
+                height: 60px
+                background-color: white
+                color: black
                 position: absolute
-                top: -30px
-                left: -30px
-                width: 70px
-                height: 70px
-                background-color: #5b72f5
-                border-radius: 50%
-        .cosmo-gallery
+                z-index: -1
+                bottom: 0px
+                left: 0
+        .trigger11
             position: relative
-            height: 400px
-            width: 400px
-            background-size: cover
-            background-image: url(./images/planet-solar/cosmo.jpg)
-            border: 10px solid
-            border-color: #b8c6db
-            &::after
-                display: flex
-                justify-content: center
-                align-items: center
-                content: "#"
-                font-size: 50px
-                color: white
-                font-weight: 900
-                position: absolute
-                top: -30px
-                left: -30px
-                width: 70px
-                height: 70px
-                background-color: #5b72f5
-                border-radius: 50%
+            z-index: 100
+        .trigger22
+            position: relative
+            z-index: 100
+        .trigger33
+            position: relative
+            z-index: 100
 
 .fourth-picture
     background-image: url(./images/space.jpg)
