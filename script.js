@@ -1,24 +1,3 @@
-var myCanvas;
-var myStarField;
-var stars = 1000;
-var x = screen.availWidth;
-var y = screen.availHeight;
-
-init();
-
-function init() {
-    myCanvas = new canvas(x, y, "star");
-    myStarField = new starfield3D(myCanvas, stars, 0.5 ,x , y,
-        x/2, y/2, "#ffffff", 100,0,0);
-    go();
-}
-
-function go() {
-    myCanvas.fill("#000");
-    myStarField.draw();
-    requestAnimationFrame(go);
-}
-
 var txt = document.getElementById('text');
 var typewriter = new Typewriter(txt, {loop: false});
 typewriter.changeDelay(35)
